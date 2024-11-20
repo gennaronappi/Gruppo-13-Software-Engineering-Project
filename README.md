@@ -6,3 +6,5 @@ Membri Progetto:
 - Nappi Gennaro
 - Padula Antonio
 - Pisacane Francesco
+
+Il progetto sarà visibile nella cartella RubricaGruppo13
