@@ -7,9 +7,6 @@ package com.mycompany.rubrica;
  * L'interfaccia è stata implementata come applicazione in JavaFX
  * 
  * 
- * @author Antonio
- * @date 7 Dicembre 2024
- * @version 1.0
  */
 public class InterfacciaElimina {
     ///Attributi
