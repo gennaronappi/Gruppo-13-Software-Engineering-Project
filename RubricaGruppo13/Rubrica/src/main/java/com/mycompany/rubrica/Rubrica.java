@@ -14,9 +14,6 @@ import java.io.*;
  * per salvare le info della struttura dati nel momento in cui l'applicazione viene chiusa.
  * 
  * 
- * @author Francesco
- * @date 8 Dicembre 2024
- * @version 1.0
  */
 public class Rubrica {
 
