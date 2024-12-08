@@ -17,9 +17,6 @@ import javafx.stage.Stage;
  * L'interfaccia è stata implementata come applicazione in JavaFX
  * 
  * 
- * @author Francesco
- * @date 7 Dicembre 2024
- * @version 1.0
  */
 public class InterfacciaRubrica extends Application {
     
