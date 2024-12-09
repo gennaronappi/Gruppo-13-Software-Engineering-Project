@@ -1,4 +1,8 @@
 package com.mycompany.rubrica;
+
+import java.io.File;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 /**
  * @class InterfacciaUpload
  * @brief Classe che rappresenta l'interfaccia per caricare e gestire file di contatti.
