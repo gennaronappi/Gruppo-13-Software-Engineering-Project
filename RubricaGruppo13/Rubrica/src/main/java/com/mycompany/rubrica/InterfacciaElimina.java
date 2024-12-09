@@ -1,4 +1,7 @@
 package com.mycompany.rubrica;
+
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 /**
  * @class InterfacciaElimina
  * @brief Classe che rappresenta l'interfaccia per eliminare un contatto.
