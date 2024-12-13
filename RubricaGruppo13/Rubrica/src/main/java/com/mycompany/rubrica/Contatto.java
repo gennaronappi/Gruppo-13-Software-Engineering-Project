@@ -30,6 +30,7 @@ public class Contatto implements Comparable<Contatto>{
      * @param cognome Cognome del contatto.
      */
     public Contatto(String cognome,String nome){
+        /// Gli attributi nome e cognome sono settati in UpperCase per evitare problemi nell'ordinamento tra lettere minuscole e maiuscole.
         this.cognome=cognome.toUpperCase();
         this.nome=nome.toUpperCase();    
     }
@@ -54,7 +55,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il nome del contatto.
      */
     public String getNome() {
-        return this.nome;
+        if(this.nome==null) return "";
+        else return this.nome;
     }
 
     /**
@@ -70,7 +72,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il cognome del contatto.
      */
     public String getCognome() {
-        return this.cognome;
+        if(this.cognome==null) return "";
+        else return this.cognome;
     }
     
     /**
@@ -104,7 +107,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il primo numero di telefono del contatto.
      */
     public String getNumeroTelefono1() {
-        return this.numeroTelefono1;
+        if(this.numeroTelefono1==null) return "";
+        else return this.numeroTelefono1;
     }
 
     /**
@@ -112,7 +116,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il secondo numero di telefono del contatto.
      */
     public String getNumeroTelefono2() {
-        return this.numeroTelefono2;
+        if(this.numeroTelefono2==null) return "";
+        else return this.numeroTelefono2;
     }
 
     /**
@@ -120,7 +125,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il terzo numero di telefono del contatto.
      */
     public String getNumeroTelefono3() {
-        return this.numeroTelefono3;
+        if(this.numeroTelefono3==null) return "";
+        else return this.numeroTelefono3;
     }
     
     /**
@@ -152,7 +158,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il primo indirizzo email del contatto.
      */
     public String getEmail() {
-        return this.email1;
+        if(this.email1==null) return "";
+        else return this.email1;
     }
     
     /**
@@ -160,7 +167,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il secondo indirizzo email del contatto.
      */
     public String getEmai2() {
-        return this.email2;
+        if(this.email2==null) return "";
+        else return this.email2;
     }
     
     /**
@@ -168,7 +176,8 @@ public class Contatto implements Comparable<Contatto>{
      * @return Il terzo indirizzo email del contatto.
      */
     public String getEmai3() {
-        return this.email3;
+        if(this.email3==null) return "";
+        else return this.email3;
     }
     
     /**
@@ -211,7 +220,6 @@ public class Contatto implements Comparable<Contatto>{
      */
     @Override
     public String toString() {
-        String output=this.nome+" "+this.cognome;
-        return output;
+        return (this.getCognome()+" "+this.getNome());
     }
 }
