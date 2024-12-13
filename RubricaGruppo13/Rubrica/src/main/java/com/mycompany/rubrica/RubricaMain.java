@@ -89,7 +89,7 @@ public class RubricaMain extends Application {
     }
     
     /**
-     * Apre una finestra per caricare un file di contatti con drag-and-drop o selezione manuale.
+     * Apre una finestra per caricare un file di contatti con drag-and-drop o selezione manuale, rappresentata dalla classe InterfacciaUpload.
      * 
      * @param controller Gestisce i contatti caricati dal file.
      */
@@ -104,14 +104,15 @@ public class RubricaMain extends Application {
         
         up.annulla.setOnAction(e -> uploadStage.close());
 
-	///Quando un file passa sulla drag area, quest'ultima indica all'utente che il file viene accettato e copiato
+	///Quando un file passa sulla drag area, quest'ultima indica all'utente che il file viene accettato e copiato.
         up.dragArea.setOnDragOver((DragEvent event) -> {
         	Dragboard db = event.getDragboard();
         	if (db.hasFiles()) {
         		event.acceptTransferModes(TransferMode.COPY);
         	}
         });
-        
+
+	///Quando il tasto sinistro del mouse viene rilasciato sulla drag area, il file trasportato viene copiato e acquisito dal programma.
         up.dragArea.setOnDragDropped((DragEvent event) -> {
             Dragboard db = event.getDragboard();
             boolean success = false;
@@ -119,11 +120,11 @@ public class RubricaMain extends Application {
                 success = true;
                 List<File> files = db.getFiles();
                 File draggedFile = files.get(0); 
-                if (!up.verificaSupportoFile(draggedFile)) {
+                if (!up.verificaSupportoFile(draggedFile)) {///< Verifica che il file sia di un formato accettato.
                     up.fileNonSupportatoAlert();
                 } else {
                     up.file.setText("File selezionato: " + draggedFile.getName());
-                    up.estraiContatti(draggedFile, controller);
+                    up.estraiContatti(draggedFile, controller);///< Se il file è di un formato accettato, inizia l'estrazione dei contatti dal file.
                     uploadStage.close();
                 }
             }
@@ -131,18 +132,18 @@ public class RubricaMain extends Application {
             event.consume();
         });
         
-        
+        ///In alternativa al drag and drop, si può usare la modalità di navigazione tra le varie cartelle del pc, perr giungere al file desiderato dall'utente.
         up.sfogliaFile.setOnAction(e -> {
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Seleziona un file");
 		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("File di testo", "*.txt"));
 		File fileSelezionato = fileChooser.showOpenDialog(uploadStage);
-                if (fileSelezionato != null) {
+                if (fileSelezionato != null) {///< Verifica che il file sia di un formato accettato.
                 	if (!up.verificaSupportoFile(fileSelezionato)) {
                     up.fileNonSupportatoAlert();
                     }else {
                     up.file.setText("File selezionato: " + fileSelezionato.getAbsolutePath());
-                    up.estraiContatti(fileSelezionato, controller);
+                    up.estraiContatti(fileSelezionato, controller);///< Se il file è di un formato accettato, inizia l'estrazione dei contatti dal file.
                     uploadStage.close();
                     }
                 }
@@ -156,28 +157,25 @@ public class RubricaMain extends Application {
      * @param controller Contiene i contatti da salvare.
      */
     public void downloadContatti(RubricaController controller){
+	///L'utente effettua la navigazione verso il file che andrà a contenere i contatti.
 	FileChooser fileChooser = new FileChooser();
 	fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
         File file = fileChooser.showSaveDialog(controller.view.getScene().getWindow());
 
 	try (FileWriter writer = new FileWriter(file)) { 
         for (Contatto c : controller.lista) {
-            String line = safeValue(c.getCognome())+"|"+safeValue(c.getNome())+"|"
-                        +safeValue(c.getNumeroTelefono1())+"|"+safeValue(c.getNumeroTelefono2())+"|"
-                        +safeValue(c.getNumeroTelefono3())+"|"+safeValue(c.getEmail())+"|"
-                        +safeValue(c.getEmai2())+"|"+safeValue(c.getEmai3());
+	///Viene creata una riga per ogni contatto, in base alle loro info, dopodichè ogni riga viene scritta nel file dal writer.
+            String line = c.getCognome()+"|"+c.getNome()+"|"
+                        +c.getNumeroTelefono1()+"|"+c.getNumeroTelefono2()+"|"
+                        +c.getNumeroTelefono3()+"|"+c.getEmail()+"|"
+                       +c.getEmai2()+"|"+c.getEmai3();
             writer.write(line+System.lineSeparator());
         }
     } catch (IOException e) {
-        e.printStackTrace();
     }
     downloadCompletatoAlert();
     }
     
-    public String safeValue(String s){
-        if(s==null) return "";
-        else return s;
-    }
 
     /**
      * @brief Mostra un avviso una volta completato il download.
@@ -205,7 +203,6 @@ public class RubricaMain extends Application {
             while ((line=read.readLine())!=null){
                 Contatto c=new Contatto();
                 Scanner i=new Scanner(line);
-                i.useLocale(Locale.US);
                 i.useDelimiter("\\|");
                 
                 c.setCognome(i.next());
