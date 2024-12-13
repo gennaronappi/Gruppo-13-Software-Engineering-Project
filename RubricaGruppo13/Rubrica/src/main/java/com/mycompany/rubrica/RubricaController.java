@@ -1,7 +1,7 @@
 package com.mycompany.rubrica;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import javafx.beans.binding.Bindings;
+import java.io.*;
 import java.util.*;
 import javafx.geometry.*;
 import javafx.scene.Scene;
@@ -21,12 +21,13 @@ import javafx.stage.Stage;
  * 
  */
 public class RubricaController {
-    final InterfacciaRubrica view;
+    InterfacciaRubrica view;
     Set<Contatto> lista;
 
     /**
      * Costruttore della classe RubricaController.
-     * Inizializza la vista e crea una nuova lista di contatti vuota.
+     * Inizializza l'interfaccia principale e crea un set di contatti vuoto.
+     * Si è scelto TreeSet così da poter ordinare i contatti in ordine alfabetico, sfruttando il metodo compareTo nella classe Contatto.
      * 
      * @param view l'interfaccia utente della rubrica
      */    
@@ -104,12 +105,15 @@ public class RubricaController {
             bottoni.setPadding(new Insets(20));
             
             conferma=new Button("Conferma"); ///< Pulsante di conferma della modifica.
-            conferma.setOnAction(evento-> { ///< Aggiorna i dati del contatto e salva.
-                String cognome=campi[0].getText();
-                String nome=campi[1].getText();
-                
-                c.setCognome(cognome);
-                c.setNome(nome);
+            conferma.disableProperty().bind( ///< Binding per impedire il salvataggio di un contatto senza nome e cognome.
+            Bindings.createBooleanBinding(
+                () -> campi[0].getText().isEmpty()&&campi[1].getText().isEmpty(),
+                campi[0].textProperty(),
+                campi[1].textProperty()
+            ));
+            conferma.setOnAction(evento-> { ///< Aggiorna i dati del contatto, li salva e aggiorna la lista dei contatti da mostrare.
+                c.setCognome(campi[0].getText());
+                c.setNome(campi[1].getText());
                 c.setNumeroTelefono1(campi[2].getText());
                 c.setNumeroTelefono2(campi[3].getText());
                 c.setNumeroTelefono3(campi[4].getText());
@@ -126,8 +130,9 @@ public class RubricaController {
             
             bottoni.getChildren().addAll(conferma,annulla);
             modview.getChildren().add(bottoni);
+            ///Creazione e presentazione della interfaccia di modifica.
             Scene nuovascena=new Scene(modview,600,700);
-            mod.setTitle("aggiungi contatto");
+            mod.setTitle("Aggiungi contatto");
             mod.setScene(nuovascena);
             mod.show();
         
@@ -238,26 +243,14 @@ public class RubricaController {
     public void salvataggio(){
         try (FileWriter writer = new FileWriter("Database.txt")) { 
         for (Contatto c : lista) {
-            String line = safeValue(c.getCognome())+"|"+safeValue(c.getNome())+"|"
-                        +safeValue(c.getNumeroTelefono1())+"|"+safeValue(c.getNumeroTelefono2())+"|"
-                        +safeValue(c.getNumeroTelefono3())+"|"+safeValue(c.getEmail())+"|"
-                        +safeValue(c.getEmai2())+"|"+safeValue(c.getEmai3());
+            String line = c.getCognome()+"|"+c.getNome()+"|"
+                    +c.getNumeroTelefono1()+"|"+c.getNumeroTelefono2()+"|"+c.getNumeroTelefono3()
+                    +"|"+c.getEmail()+"|"+c.getEmai2()+"|"+c.getEmai3();
             writer.write(line+System.lineSeparator());
         }
     } catch (IOException e) {
-        e.printStackTrace();
     }
     }
     
-    /**
-     * Restituisce un safe value per una stringa, sostituendo i valori nulli con una stringa vuota.
-     * 
-     * @param s la stringa da verificare
-     * @return una stringa vuota se il valore è null, altrimenti la stessa stringa
-     */
-    public String safeValue(String s){
-        if(s==null) return "";
-        else return s;
-    }
     
 }
