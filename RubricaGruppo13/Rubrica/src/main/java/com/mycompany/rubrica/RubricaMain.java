@@ -1,22 +1,13 @@
 package com.mycompany.rubrica;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 import java.util.*;
 import static javafx.application.Application.launch;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.Dragboard;
-import javafx.scene.input.TransferMode;
-import javafx.stage.FileChooser;
+import javafx.scene.control.*;
+import javafx.scene.input.*;
+import javafx.stage.*;
 
 /**
  * @class RubricaMain
@@ -24,7 +15,7 @@ import javafx.stage.FileChooser;
  *
  * Questa classe avvia l'applicazione, gestisce l'interfaccia principale,
  * e include metodi per caricare, salvare e manipolare i contatti della rubrica.
- * 
+ * Applicazione creata con JavaFX.
  *
  * @author Francesco, Antonio, Gennaro.
  */
@@ -37,10 +28,10 @@ public class RubricaMain extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-        InterfacciaRubrica view = new InterfacciaRubrica();
-        RubricaController controller=new RubricaController(view);
+        InterfacciaRubrica view = new InterfacciaRubrica();///< Crea l'interfaccia principale.
+        RubricaController controller=new RubricaController(view);///< Crea un controller per l'interfaccia, che viene passata come parametro.
         leggi(new File("Database.txt"),controller); ///< Carica i contatti salvati in precedenza dal file "Database.txt" e li aggiunge alla rubrica attraverso il controller
-        controller.display(controller.lista);
+        
         
         ///Mostra i contatti caricati nella vista iniziale.
         controller.display(controller.lista);
@@ -112,7 +103,8 @@ public class RubricaMain extends Application {
         uploadStage.show();
         
         up.annulla.setOnAction(e -> uploadStage.close());
-        
+
+	///Quando un file passa sulla drag area, quest'ultima indica all'utente che il file viene accettato e copiato
         up.dragArea.setOnDragOver((DragEvent event) -> {
         	Dragboard db = event.getDragboard();
         	if (db.hasFiles()) {
