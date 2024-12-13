@@ -9,10 +9,11 @@ import javafx.scene.layout.*;
  * @class InterfacciaAggiungi
  * @brief Classe che rappresenta l'interfaccia grafica per aggiungere un nuovo contatto.
  * 
- * La classe InterfacciaAggiungi gestisce l'interfaccia grafica che permette all'utente di inserire tutti i dettagli relativi ad un contatto.
+ * InterfacciaAggiungi gestisce l'interfaccia grafica che permette all'utente di inserire tutti i dettagli relativi ad un contatto.
+ * L'interfaccia è stata implementata come applicazione in JavaFX.
  * 
  *
- * @author Francesco
+ * @author Francesco, Antonio, Gennaro
  * 
  */
 public class InterfacciaAggiungi {
