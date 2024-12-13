@@ -13,7 +13,7 @@ import javafx.scene.layout.*;
  * Tramite questa interfaccia, l'utente potrà gestire l'intera rubrica
  * grazie agli appositi tasti per aggiungere, modificare ed eliminare contatti,
  * alla casella di ricerca dei contatti e ai tasti per scaricare e caricare i contatti.
- * L'interfaccia è stata implementata come applicazione in JavaFX.
+ * 
  * 
  * 
  * @author Francesco, Antonio, Gennaro
@@ -34,7 +34,7 @@ public class InterfacciaRubrica extends VBox {
      * @brief Costruttore della classe InterfacciaRubrica.
      * 
      * Inizializza l'interfaccia principale della rubrica con i seguenti elementi:
-     * - Un'intestazione con il titolo della rubrica, un contatore di contatti e una barra di ricerca.
+     * - Un'intestazione con il titolo della rubrica, un contatore di contatti, un tasto per aggiungere i contatti e una barra di ricerca.
      * - Una lista centrale per visualizzare i contatti.
      * - Un footer con pulsanti per caricare e scaricare i contatti.
      */
@@ -44,17 +44,17 @@ public class InterfacciaRubrica extends VBox {
         this.setAlignment(Pos.CENTER); ///< Centra gli elementi nel contenitore
         
         this.aggiungiContatto=new Button("+ Aggiungi Contatto"); ///< Pulsante per aggiungere un nuovo contatto.
-        this.aggiungiContatto.setPadding(new Insets(10));
+        this.aggiungiContatto.setPadding(new Insets(10));///< Un padding maggiore fa risaltare il tasto.
         Label rubricalbl=new Label("Rubrica"); ///< Titolo dell'interfaccia.
         rubricalbl.styleProperty().set("-fx-font-size: 30px;");
-        contatore=new Label();
-        HBox cont=new HBox(new Label("Numero di contatti in rubrica: "),contatore); ///<Contatore dei contatti in rubrica.
+        contatore=new Label();///< Contatore dei contatti in rubrica, viene gestito dalla classe RubricaController.
+        HBox cont=new HBox(new Label("Numero di contatti in rubrica: "),contatore); 
         VBox title=new VBox(rubricalbl,cont);
         this.ricerca=new TextField(); ///< Casella di testo per la ricerca.
         this.ricercaButton=new Button("Cerca"); ///< Pulsante per avviare la ricerca.
         HBox header=new HBox();
-        header.setPadding(new Insets(20));
-        header.getChildren().addAll(title,aggiungiContatto, new HBox(ricerca,ricercaButton))
+        header.setPadding(new Insets(20));///< Per separare meglio l'intestazione dalla lista dei contatti.
+        header.getChildren().addAll(title,aggiungiContatto, new HBox(ricerca,ricercaButton));
         header.setSpacing(30);
         header.setAlignment(Pos.CENTER);
         this.getChildren().add(header);
