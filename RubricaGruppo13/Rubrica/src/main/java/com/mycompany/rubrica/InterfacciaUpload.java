@@ -1,7 +1,6 @@
 package com.mycompany.rubrica;
 
 import java.io.*;
-import java.util.List;
 import javafx.scene.control.*;
 import javafx.application.Application;
 import javafx.geometry.*;
@@ -17,7 +16,7 @@ import java.util.*;
  * @brief Classe che rappresenta l'interfaccia per caricare e gestire file di contatti.
  *
  * Tramite questa interfaccia, l'utente potrà selezionare o trascinare un file da caricare nella rubrica.
- * L'interfaccia è stata implementata come applicazione in JavaFX.
+ * 
  * 
  * 
  * @note Supporta solo file con estensione `.txt`.
@@ -115,7 +114,6 @@ public class InterfacciaUpload extends VBox{
             while ((line=read.readLine())!=null){ ///< Ciclo per leggere ogni riga del file.
                 Contatto c=new Contatto(); ///< Nuovo contatto da popolare.
                 Scanner i=new Scanner(line); ///< Scanner per analizzare i dati della riga.
-                i.useLocale(Locale.US);
                 i.useDelimiter("\\|"); ///< Utilizza il delimitatore `|` per separare i campi
                 
                 ///Popolamento dei campi del contatto.
@@ -130,15 +128,15 @@ public class InterfacciaUpload extends VBox{
                 c.setNumeroTelefono2(i.next()); ///< Secondo numero di telefono.
                 c.setNumeroTelefono3(i.next()); ///< Terzo numero di telefono.
                 c.setEmail1(i.next()); ///< Prima email.
-                c.setEmail2(i.next()); ///< Prima email.
-                if(i.hasNext()) ///< Controlla se c'è una terza email; altrimenti, assegna una stringa vuota.
-                    c.setEmail3(i.next());
+                c.setEmail2(i.next()); ///< Seconda email.
+                if(i.hasNext()) ///< Serve a non generare eccezioni.
+                    c.setEmail3(i.next());///< Terza email.
                 else
                     c.setEmail3("");
                 cont++;
                 
                 i.close();
-                estratti.add(c);
+                estratti.add(c);///< Il contatto estratto viene aggiunto alla lista dei contatti da inserire in rubrica.
                 }
             }
         } catch (IOException e){ ///< Gestione dell'errore in caso di problemi di lettura del file
