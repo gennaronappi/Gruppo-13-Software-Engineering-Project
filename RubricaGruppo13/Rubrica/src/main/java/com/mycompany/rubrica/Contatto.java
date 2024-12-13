@@ -5,7 +5,8 @@ package com.mycompany.rubrica;
  * @brief Classe che rappresenta un contatto nella rubrica.
  * 
  * La classe Contatto consente di gestire i dettagli di un contatto
- * (nome, cognome, numeri di telefono e indirizzi email). 
+ * (nome, cognome, numeri di telefono e indirizzi email).
+ * I metodi getter sono programmati in modo da restituire una stringa vuota "", invece di null, nel caso in cui fossero nulli.
  *
  *
  * @author Francesco, Antonio, Gennaro
