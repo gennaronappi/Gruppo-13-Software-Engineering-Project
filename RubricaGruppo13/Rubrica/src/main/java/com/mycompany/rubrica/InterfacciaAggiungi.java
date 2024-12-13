@@ -10,7 +10,7 @@ import javafx.scene.layout.*;
  * @brief Classe che rappresenta l'interfaccia grafica per aggiungere un nuovo contatto.
  * 
  * InterfacciaAggiungi gestisce l'interfaccia grafica che permette all'utente di inserire tutti i dettagli relativi ad un contatto.
- * L'interfaccia è stata implementata come applicazione in JavaFX.
+ * 
  * 
  *
  * @author Francesco, Antonio, Gennaro
@@ -19,7 +19,7 @@ import javafx.scene.layout.*;
 public class InterfacciaAggiungi {
     VBox addview; ///< Contenitore principale per gli elementi dell'interfaccia.
     Label aggiungi; ///< Etichetta principale dell'interfaccia.
-    TextField[] campi; ///< Array di campi di testo per l'inserimento dei dati (nome, cognome, numeri di telefono, email).
+    TextField[] campi; ///< Array di campi di testo per l'inserimento dei dati (nome, cognome, 3x numeri di telefono, 3x email).
     Label[] tags; ///< Array di etichette descrittive per i campi di input.
     Button conferma; ///< Pulsante di conferma dell'inserimento del contatto.
     Button annulla; ///< Pulsante per annullare l'operazione.
@@ -28,7 +28,7 @@ public class InterfacciaAggiungi {
     public InterfacciaAggiungi(){
         /// Layout principale
         addview=new VBox();
-        campi = new TextField[8]; ///< Contenitore VBox per i campi di input. Contiene 8 elementi.
+        campi = new TextField[8];
         tags=new Label[8];
         addview.setSpacing(10); ///< Imposta la spaziatura tra gli elementi
         addview.setAlignment(Pos.CENTER); ///< Centra gli elementi all'interno del contenitore.
@@ -58,6 +58,7 @@ public class InterfacciaAggiungi {
         bottoni.setSpacing(20);
         bottoni.setPadding(new Insets(20));
         conferma=new Button("Conferma"); ///<Pulsante "Conferma"
+        /// Il pulsante conferma sfrutta il binding per impedire il salvataggio del contatto se esso non presenta né nome né cognome.
         conferma.disableProperty().bind(
             Bindings.createBooleanBinding(
                 () -> campi[0].getText().isEmpty()&&campi[1].getText().isEmpty(),
