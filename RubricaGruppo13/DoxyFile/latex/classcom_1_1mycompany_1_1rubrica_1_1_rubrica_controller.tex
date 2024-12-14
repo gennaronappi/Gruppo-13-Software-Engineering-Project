@@ -1,0 +1,165 @@
+\doxysection{com.\+mycompany.\+rubrica.\+Rubrica\+Controller Class Reference}
+\hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{}\label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}\index{com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}}
+
+
+Classe controller per la gestione dell\textquotesingle{}applicazione Rubrica.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a7f4e19453caf56e99f783c73806f99fc}{Rubrica\+Controller}} (\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}} view)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a5e9a51d192e099d7b2dc62dcd6935756}{display}} (Set$<$ \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto}} $>$ elenco)
+\begin{DoxyCompactList}\small\item\em Visualizza i contatti nella vista, aggiornando l\textquotesingle{}interfaccia utente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_af77fa45d9b5e7a798c0b9012f799599c}{aggiungi\+Contatto}} (\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto}} c)
+\begin{DoxyCompactList}\small\item\em Aggiunge un nuovo contatto alla rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_aed3e6f98aa78e7b2974a6c7f9a5fd186}{ricerca\+Contatto}} ()
+\begin{DoxyCompactList}\small\item\em Esegue una ricerca nella rubrica in base al testo inserito dall\textquotesingle{}utente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a93eb0679fee4f2970008de7effadb132}{elimina\+Contatto}} (\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto}} c)
+\begin{DoxyCompactList}\small\item\em Elimina un contatto dalla rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_aefbd26a748b37bffb7ecb5fbc7fb67fb}{salvataggio}} ()
+\begin{DoxyCompactList}\small\item\em Salva la lista dei contatti su un file di testo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe controller per la gestione dell\textquotesingle{}applicazione Rubrica. 
+
+Questa classe gestisce l\textquotesingle{}interazione tra l\textquotesingle{}interfaccia utente e i dati dei contatti. Permette di visualizzare, aggiungere, modificare, cercare ed eliminare contatti.
+
+\begin{DoxyAuthor}{Author}
+Francesco, Antonio, Gennaro. 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a7f4e19453caf56e99f783c73806f99fc}\index{com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}!RubricaController@{RubricaController}}
+\index{RubricaController@{RubricaController}!com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}}
+\doxysubsubsection{\texorpdfstring{RubricaController()}{RubricaController()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a7f4e19453caf56e99f783c73806f99fc} 
+com.\+mycompany.\+rubrica.\+Rubrica\+Controller.\+Rubrica\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}}}]{view}{}\end{DoxyParamCaption})}
+
+
+
+Costruttore della classe \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}. 
+
+Inizializza l\textquotesingle{}interfaccia principale e crea un set di contatti vuoto. Si è scelto Tree\+Set così da poter ordinare i contatti in ordine alfabetico, sfruttando il metodo compare\+To nella classe \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & l\textquotesingle{}interfaccia utente della rubrica \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_af77fa45d9b5e7a798c0b9012f799599c}\index{com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}!aggiungiContatto@{aggiungiContatto}}
+\index{aggiungiContatto@{aggiungiContatto}!com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}}
+\doxysubsubsection{\texorpdfstring{aggiungiContatto()}{aggiungiContatto()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_af77fa45d9b5e7a798c0b9012f799599c} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Controller.\+aggiungi\+Contatto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto}}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Aggiunge un nuovo contatto alla rubrica. 
+
+Dopo l\textquotesingle{}aggiunta, i dati vengono salvati e la vista aggiornata.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & il contatto da aggiungere \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a5e9a51d192e099d7b2dc62dcd6935756}\index{com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}!display@{display}}
+\index{display@{display}!com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a5e9a51d192e099d7b2dc62dcd6935756} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Controller.\+display (\begin{DoxyParamCaption}\item[{Set$<$ \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto}} $>$}]{elenco}{}\end{DoxyParamCaption})}
+
+
+
+Visualizza i contatti nella vista, aggiornando l\textquotesingle{}interfaccia utente. 
+
+Ogni contatto viene rappresentato da un {\ttfamily \doxylink{}{HBox}} contenente le informazioni del contatto e i pulsanti per modificarlo o eliminarlo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em elenco} & Set di contatti da visualizzare \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Pulisce la lista visibile dei contatti.
+
+\texorpdfstring{$<$}{<} Aggiorna il contatore dei contatti.
+
+Ciclo per creare un\textquotesingle{}interfaccia che modifica o elimina ogni un contatto, per ogni contatto nell\textquotesingle{}elenco.
+
+Creazione di una riga per visualizzare il contatto.
+
+\texorpdfstring{$<$}{<} Pulsante per modificare il contatto.
+
+\texorpdfstring{$<$}{<} Crea una nuova finestra per modificare il contatto.
+
+Etichette per i campi.
+
+Campi di testo con i dati del contatto.
+
+\texorpdfstring{$<$}{<} Pulsante di conferma della modifica.
+
+\texorpdfstring{$<$}{<} Binding per impedire il salvataggio di un contatto senza nome e cognome.
+
+\texorpdfstring{$<$}{<} Aggiorna i dati del contatto, li salva e aggiorna la lista dei contatti da mostrare.
+
+\texorpdfstring{$<$}{<} Pulsante per annullare la modifica.
+
+Creazione e presentazione della interfaccia di modifica.
+
+\texorpdfstring{$<$}{<} Pulsante per eliminare il contatto.
+
+\texorpdfstring{$<$}{<} Finestra di conferma per eliminare il contatto.
+
+Etichette per visualizzare i dettagli del contatto.
+
+Aggiunge tutti gli elementi all\textquotesingle{}HBox.
+
+Aggiunge l\textquotesingle{}HBox alla vista.\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a93eb0679fee4f2970008de7effadb132}\index{com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}!eliminaContatto@{eliminaContatto}}
+\index{eliminaContatto@{eliminaContatto}!com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}}
+\doxysubsubsection{\texorpdfstring{eliminaContatto()}{eliminaContatto()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_a93eb0679fee4f2970008de7effadb132} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Controller.\+elimina\+Contatto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto}}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Elimina un contatto dalla rubrica. 
+
+Dopo l\textquotesingle{}eliminazione, i dati vengono salvati e la vista aggiornata.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & il contatto da eliminare \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_aed3e6f98aa78e7b2974a6c7f9a5fd186}\index{com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}!ricercaContatto@{ricercaContatto}}
+\index{ricercaContatto@{ricercaContatto}!com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}}
+\doxysubsubsection{\texorpdfstring{ricercaContatto()}{ricercaContatto()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_aed3e6f98aa78e7b2974a6c7f9a5fd186} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Controller.\+ricerca\+Contatto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Esegue una ricerca nella rubrica in base al testo inserito dall\textquotesingle{}utente. 
+
+I contatti vengono filtrati in base al cognome o al nome. \Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_aefbd26a748b37bffb7ecb5fbc7fb67fb}\index{com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}!salvataggio@{salvataggio}}
+\index{salvataggio@{salvataggio}!com.mycompany.rubrica.RubricaController@{com.mycompany.rubrica.RubricaController}}
+\doxysubsubsection{\texorpdfstring{salvataggio()}{salvataggio()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller_aefbd26a748b37bffb7ecb5fbc7fb67fb} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Controller.\+salvataggio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Salva la lista dei contatti su un file di testo. 
+
+Ogni contatto viene salvato in formato \textquotesingle{}.txt\textquotesingle{}, con i campi separati da una barra verticale. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/mycompany/rubrica/Rubrica\+Controller.\+java\end{DoxyCompactItemize}

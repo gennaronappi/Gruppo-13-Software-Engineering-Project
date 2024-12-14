@@ -1,0 +1,160 @@
+\doxysection{com.\+mycompany.\+rubrica.\+Interfaccia\+Upload Class Reference}
+\hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload}{}\label{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload}\index{com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}}
+
+
+Classe che rappresenta l\textquotesingle{}interfaccia per caricare e gestire file di contatti.  
+
+
+Inheritance diagram for com.\+mycompany.\+rubrica.\+Interfaccia\+Upload\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a8c169bfec264cabb8f394c2723a45f9c}{Interfaccia\+Upload}} ()
+\begin{DoxyCompactList}\small\item\em Metodi. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_ad94f2e116aece955cb96ac13a999eaa9}{verifica\+Supporto\+File}} (File file)
+\begin{DoxyCompactList}\small\item\em Verifica se il file selezionato è supportato. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a7dc1e5e265ef15bb154ce6215229bf4d}{file\+Non\+Supportato\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Mostra un avviso se il file caricato non è supportato. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a6fa4598ad53c8d99b32e15c7423b69e5}{estrai\+Contatti}} (File file, \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}} controller)
+\begin{DoxyCompactList}\small\item\em Estrae i contatti da un file e li aggiunge alla rubrica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe che rappresenta l\textquotesingle{}interfaccia per caricare e gestire file di contatti. 
+
+Tramite questa interfaccia, l\textquotesingle{}utente potrà selezionare o trascinare un file da caricare nella rubrica.
+
+\begin{DoxyNote}{Note}
+Supporta solo file con estensione {\ttfamily .txt}.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Francesco, Antonio, Gennaro 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a8c169bfec264cabb8f394c2723a45f9c}\index{com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}!InterfacciaUpload@{InterfacciaUpload}}
+\index{InterfacciaUpload@{InterfacciaUpload}!com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}}
+\doxysubsubsection{\texorpdfstring{InterfacciaUpload()}{InterfacciaUpload()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a8c169bfec264cabb8f394c2723a45f9c} 
+com.\+mycompany.\+rubrica.\+Interfaccia\+Upload.\+Interfaccia\+Upload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metodi. 
+
+Costruttore della classe \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload}{Interfaccia\+Upload}.
+
+Inizializza l\textquotesingle{}interfaccia con\+:
+\begin{DoxyItemize}
+\item Un titolo.
+\item Un\textquotesingle{}area drag-\/and-\/drop.
+\item Pulsanti per selezionare un file o annullare. 
+\end{DoxyItemize}\texorpdfstring{$<$}{<} Centra tutti gli elementi.
+
+\texorpdfstring{$<$}{<} Spaziatura tra gli elementi.
+
+\texorpdfstring{$<$}{<} Titolo.
+
+\texorpdfstring{$<$}{<} Etichetta per il file selezionato.
+
+Area per il drag and drop.
+
+\texorpdfstring{$<$}{<} Istruzione per il drag and drop.
+
+\texorpdfstring{$<$}{<} Pulsante per selezionare il file.
+
+\texorpdfstring{$<$}{<} Pulsante per annullare l\textquotesingle{}operazione.
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a6fa4598ad53c8d99b32e15c7423b69e5}\index{com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}!estraiContatti@{estraiContatti}}
+\index{estraiContatti@{estraiContatti}!com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}}
+\doxysubsubsection{\texorpdfstring{estraiContatti()}{estraiContatti()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a6fa4598ad53c8d99b32e15c7423b69e5} 
+void com.\+mycompany.\+rubrica.\+Interfaccia\+Upload.\+estrai\+Contatti (\begin{DoxyParamCaption}\item[{File}]{file}{, }\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}}}]{controller}{}\end{DoxyParamCaption})}
+
+
+
+Estrae i contatti da un file e li aggiunge alla rubrica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Il file da cui estrarre i contatti. \\
+\hline
+{\em controller} & Il controller della rubrica che gestirà i contatti estratti.\\
+\hline
+\end{DoxyParams}
+Il file deve essere in formato {\ttfamily .txt} con i contatti separati da {\ttfamily \texorpdfstring{$\vert$}{|}}. Se un contatto non presenta nome o cognome (campi obbligatori), viene ignorato con un messaggio di errore. \texorpdfstring{$<$}{<} Lista per memorizzare i contatti estratti dal file.
+
+\texorpdfstring{$<$}{<} Ciclo per leggere ogni riga del file.
+
+\texorpdfstring{$<$}{<} Nuovo contatto da popolare.
+
+\texorpdfstring{$<$}{<} Scanner per analizzare i dati della riga.
+
+\texorpdfstring{$<$}{<} Utilizza il delimitatore {\ttfamily \texorpdfstring{$\vert$}{|}} per separare i campi
+
+Popolamento dei campi del contatto.
+
+\texorpdfstring{$<$}{<} Verifica del nome e del cognome\+: non possono essere vuoti.
+
+\texorpdfstring{$<$}{<} Messaggio di errore per i contatti non validi.
+
+Se nome e cognome sono validi, legge i numeri di telefono e le email.
+
+\texorpdfstring{$<$}{<} Primo numero di telefono.
+
+\texorpdfstring{$<$}{<} Secondo numero di telefono.
+
+\texorpdfstring{$<$}{<} Terzo numero di telefono.
+
+\texorpdfstring{$<$}{<} Prima email.
+
+\texorpdfstring{$<$}{<} Seconda email.
+
+\texorpdfstring{$<$}{<} Serve a non generare eccezioni.
+
+\texorpdfstring{$<$}{<} Terza email.
+
+\texorpdfstring{$<$}{<} Il contatto estratto viene aggiunto alla lista dei contatti da inserire in rubrica.
+
+\texorpdfstring{$<$}{<} Gestione dell\textquotesingle{}errore in caso di problemi di lettura del file
+
+Aggiunge tutti i contatti validi al controller della rubrica.\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a7dc1e5e265ef15bb154ce6215229bf4d}\index{com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}!fileNonSupportatoAlert@{fileNonSupportatoAlert}}
+\index{fileNonSupportatoAlert@{fileNonSupportatoAlert}!com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}}
+\doxysubsubsection{\texorpdfstring{fileNonSupportatoAlert()}{fileNonSupportatoAlert()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_a7dc1e5e265ef15bb154ce6215229bf4d} 
+void com.\+mycompany.\+rubrica.\+Interfaccia\+Upload.\+file\+Non\+Supportato\+Alert (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mostra un avviso se il file caricato non è supportato. 
+
+Mostra un messaggio di errore che informa l\textquotesingle{}utente che solo i file {\ttfamily .txt} sono accettati. \Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_ad94f2e116aece955cb96ac13a999eaa9}\index{com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}!verificaSupportoFile@{verificaSupportoFile}}
+\index{verificaSupportoFile@{verificaSupportoFile}!com.mycompany.rubrica.InterfacciaUpload@{com.mycompany.rubrica.InterfacciaUpload}}
+\doxysubsubsection{\texorpdfstring{verificaSupportoFile()}{verificaSupportoFile()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload_ad94f2e116aece955cb96ac13a999eaa9} 
+boolean com.\+mycompany.\+rubrica.\+Interfaccia\+Upload.\+verifica\+Supporto\+File (\begin{DoxyParamCaption}\item[{File}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se il file selezionato è supportato. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Il file da verificare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} se il file ha estensione {\ttfamily .txt}, altrimenti {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/mycompany/rubrica/Interfaccia\+Upload.\+java\end{DoxyCompactItemize}

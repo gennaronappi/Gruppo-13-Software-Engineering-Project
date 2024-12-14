@@ -1,0 +1,167 @@
+\doxysection{com.\+mycompany.\+rubrica.\+Rubrica\+Main Class Reference}
+\hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main}{}\label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main}\index{com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}}
+
+
+Classe principale dell\textquotesingle{}applicazione Rubrica.  
+
+
+Inheritance diagram for com.\+mycompany.\+rubrica.\+Rubrica\+Main\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a4ac27110712bae4f0f3c919e7a75f613}{start}} (Stage primary\+Stage)
+\begin{DoxyCompactList}\small\item\em Metodo di avvio dell\textquotesingle{}applicazione\+: configura la finestra principale e associa eventi ai componenti dell\textquotesingle{}interfaccia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a9913c2649531f9365810121999029726}{aggiungi}} (\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}} controller)
+\begin{DoxyCompactList}\small\item\em Apre una finestra per aggiungere un nuovo contatto alla rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a1e9f436fd49b6c2c32564b2c70c778b2}{upload}} (\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}} controller)
+\begin{DoxyCompactList}\small\item\em Apre una finestra per caricare un file di contatti con drag-\/and-\/drop o selezione manuale, rappresentata dalla classe \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload}{Interfaccia\+Upload}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a0d0f777055f66ec2bbcb5d2293be88c2}{download\+Contatti}} (\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}} controller)
+\begin{DoxyCompactList}\small\item\em Salva tutti i contatti della rubrica in un file scelto dall\textquotesingle{}utente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_aaf8cf11b35b3b7017565707f0d032dc8}{leggi}} (File file, \mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}} controller)
+\begin{DoxyCompactList}\small\item\em Legge un file di testo contenente informazioni sui contatti, estrae i dati per ogni riga, li converte in oggetti di tipo \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto} e li aggiunge alla lista di contatti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a0096b19de2541a5352c444f501a0d292}\label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a0096b19de2541a5352c444f501a0d292} 
+static void {\bfseries main} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe principale dell\textquotesingle{}applicazione Rubrica. 
+
+Questa classe avvia l\textquotesingle{}applicazione, gestisce l\textquotesingle{}interfaccia principale, e include metodi per caricare, salvare e manipolare i contatti della rubrica. Applicazione creata con Java\+FX.
+
+\begin{DoxyAuthor}{Author}
+Francesco, Antonio, Gennaro. 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a9913c2649531f9365810121999029726}\index{com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}!aggiungi@{aggiungi}}
+\index{aggiungi@{aggiungi}!com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}}
+\doxysubsubsection{\texorpdfstring{aggiungi()}{aggiungi()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a9913c2649531f9365810121999029726} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Main.\+aggiungi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}}}]{controller}{}\end{DoxyParamCaption})}
+
+
+
+Apre una finestra per aggiungere un nuovo contatto alla rubrica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & Gestisce la logica per l\textquotesingle{}aggiunta di contatti. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Pulsante "{}\+Annulla"{} che chiude la finestra senza salvare
+
+Pulsante "{}\+Conferma"{} salva i dati inseriti come nuovo contatto.
+
+\texorpdfstring{$<$}{<} Legge il cognome inserito dall\textquotesingle{}utente.
+
+\texorpdfstring{$<$}{<} Legge il nome inserito dall\textquotesingle{}utente.
+
+\texorpdfstring{$<$}{<} Crea un nuovo oggetto \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto} e aggiunge dati.
+
+\texorpdfstring{$<$}{<} Aggiunge il nuovo contatto al controller\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a0d0f777055f66ec2bbcb5d2293be88c2}\index{com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}!downloadContatti@{downloadContatti}}
+\index{downloadContatti@{downloadContatti}!com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}}
+\doxysubsubsection{\texorpdfstring{downloadContatti()}{downloadContatti()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a0d0f777055f66ec2bbcb5d2293be88c2} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Main.\+download\+Contatti (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}}}]{controller}{}\end{DoxyParamCaption})}
+
+
+
+Salva tutti i contatti della rubrica in un file scelto dall\textquotesingle{}utente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & Contiene i contatti da salvare. \\
+\hline
+\end{DoxyParams}
+L\textquotesingle{}utente effettua la navigazione verso il file che andrà a contenere i contatti.
+
+Viene creata una riga per ogni contatto, in base alle loro info, dopodichè ogni riga viene scritta nel file dal writer.\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_aaf8cf11b35b3b7017565707f0d032dc8}\index{com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}!leggi@{leggi}}
+\index{leggi@{leggi}!com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}}
+\doxysubsubsection{\texorpdfstring{leggi()}{leggi()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_aaf8cf11b35b3b7017565707f0d032dc8} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Main.\+leggi (\begin{DoxyParamCaption}\item[{File}]{file}{, }\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}}}]{controller}{}\end{DoxyParamCaption})}
+
+
+
+Legge un file di testo contenente informazioni sui contatti, estrae i dati per ogni riga, li converte in oggetti di tipo \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_contatto}{Contatto} e li aggiunge alla lista di contatti. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Il file da cui leggere i contatti. \\
+\hline
+{\em controller} & Il controller della rubrica che gestirà i contatti letti. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a4ac27110712bae4f0f3c919e7a75f613}\index{com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}!start@{start}}
+\index{start@{start}!com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a4ac27110712bae4f0f3c919e7a75f613} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Main.\+start (\begin{DoxyParamCaption}\item[{Stage}]{primary\+Stage}{}\end{DoxyParamCaption})}
+
+
+
+Metodo di avvio dell\textquotesingle{}applicazione\+: configura la finestra principale e associa eventi ai componenti dell\textquotesingle{}interfaccia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em primary\+Stage} & Il principale contenitore della finestra dell\textquotesingle{}applicazione. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Crea l\textquotesingle{}interfaccia principale.
+
+\texorpdfstring{$<$}{<} Crea un controller per l\textquotesingle{}interfaccia, che viene passata come parametro.
+
+\texorpdfstring{$<$}{<} Carica i contatti salvati in precedenza dal file "{}\+Database.\+txt"{} e li aggiunge alla rubrica attraverso il controller
+
+Mostra i contatti caricati nella vista iniziale.
+
+Associa il pulsante "{}\+Aggiungi Contatto"{} al metodo {\ttfamily aggiungi}.
+
+Associa il pulsante "{}\+Ricerca"{} alla funzione di ricerca contatti del controller.
+
+Configura il pulsante "{}\+Upload"{} per caricare nuovi contatti da file.
+
+Configura il pulsante "{}\+Download"{} per salvare i contatti in un file.
+
+Configurazione della finestra principale.\Hypertarget{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a1e9f436fd49b6c2c32564b2c70c778b2}\index{com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}!upload@{upload}}
+\index{upload@{upload}!com.mycompany.rubrica.RubricaMain@{com.mycompany.rubrica.RubricaMain}}
+\doxysubsubsection{\texorpdfstring{upload()}{upload()}}
+{\footnotesize\ttfamily \label{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_main_a1e9f436fd49b6c2c32564b2c70c778b2} 
+void com.\+mycompany.\+rubrica.\+Rubrica\+Main.\+upload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mycompany_1_1rubrica_1_1_rubrica_controller}{Rubrica\+Controller}}}]{controller}{}\end{DoxyParamCaption})}
+
+
+
+Apre una finestra per caricare un file di contatti con drag-\/and-\/drop o selezione manuale, rappresentata dalla classe \doxylink{classcom_1_1mycompany_1_1rubrica_1_1_interfaccia_upload}{Interfaccia\+Upload}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & Gestisce i contatti caricati dal file. \\
+\hline
+\end{DoxyParams}
+Quando un file passa sulla drag area, quest\textquotesingle{}ultima indica all\textquotesingle{}utente che il file viene accettato e copiato.
+
+Quando il tasto sinistro del mouse viene rilasciato sulla drag area, il file trasportato viene copiato e acquisito dal programma.
+
+\texorpdfstring{$<$}{<} Verifica che il file sia di un formato accettato.
+
+\texorpdfstring{$<$}{<} Se il file è di un formato accettato, inizia l\textquotesingle{}estrazione dei contatti dal file.
+
+In alternativa al drag and drop, si può usare la modalità di navigazione tra le varie cartelle del pc, perr giungere al file desiderato dall\textquotesingle{}utente.
+
+\texorpdfstring{$<$}{<} Verifica che il file sia di un formato accettato.
+
+\texorpdfstring{$<$}{<} Se il file è di un formato accettato, inizia l\textquotesingle{}estrazione dei contatti dal file.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/mycompany/rubrica/Rubrica\+Main.\+java\end{DoxyCompactItemize}
