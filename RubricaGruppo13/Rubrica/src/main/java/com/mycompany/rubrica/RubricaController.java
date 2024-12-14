@@ -221,12 +221,14 @@ public class RubricaController {
                     ricercati.add(c);
             }
         }
-        if(ricercati.size()==0){
+        if(ricercati.isEmpty()){
             Alert alert = new Alert(Alert.AlertType.WARNING, "Nessun risultato trovato!", ButtonType.OK);
             alert.setHeaderText(null); 
             alert.showAndWait();
+            view.ricerca.setText("");
+            display(lista);
         }
-        this.display(ricercati);
+        else this.display(ricercati);
     }
     
     /**
