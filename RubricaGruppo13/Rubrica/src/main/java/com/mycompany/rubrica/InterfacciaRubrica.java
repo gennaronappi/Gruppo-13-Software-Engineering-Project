@@ -42,6 +42,7 @@ public class InterfacciaRubrica extends VBox {
         super();
         this.setSpacing(10); ///< Spaziatura tra gli elementi.
         this.setAlignment(Pos.CENTER); ///< Centra gli elementi nel contenitore
+        this.setStyle("-fx-background-color: white;");
         
         this.aggiungiContatto=new Button("+ Aggiungi Contatto"); ///< Pulsante per aggiungere un nuovo contatto.
         this.aggiungiContatto.setPadding(new Insets(10));///< Un padding maggiore fa risaltare il tasto.
@@ -51,10 +52,10 @@ public class InterfacciaRubrica extends VBox {
         HBox cont=new HBox(new Label("Numero di contatti in rubrica: "),contatore); 
         VBox title=new VBox(rubricalbl,cont);
         this.ricerca=new TextField(); ///< Casella di testo per la ricerca.
-        this.ricercaButton=new Button("Cerca"); ///< Pulsante per avviare la ricerca.
+        this.ricercaButton=new Button("🔍 Cerca"); ///< Pulsante per avviare la ricerca.
         HBox header=new HBox();
         header.setPadding(new Insets(20));///< Per separare meglio l'intestazione dalla lista dei contatti.
-        header.getChildren().addAll(title,aggiungiContatto, new HBox(ricerca,ricercaButton));
+        header.getChildren().addAll(title,aggiungiContatto, new HBox(10,ricerca,ricercaButton));
         header.setSpacing(30);
         header.setAlignment(Pos.CENTER);
         this.getChildren().add(header);
