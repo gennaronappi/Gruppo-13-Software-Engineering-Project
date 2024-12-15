@@ -22,3 +22,9 @@ Il progetto sarà visibile nella cartella RubricaGruppo13.
 Link: https://drive.google.com/drive/folders/1CE5bnbCdbHFNFXt7r2IMo4jteYbwy_sC?usp=drive_link
 
 ---
+
+## **Pagina del DoxyFile**
+
+Link: https://gennaronappi.github.io/Gruppo-13-Software-Engineering-Project/RubricaGruppo13/DoxyFile/HTML/index.html
+
+---
