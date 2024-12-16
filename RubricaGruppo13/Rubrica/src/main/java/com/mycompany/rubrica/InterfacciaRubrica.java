@@ -62,7 +62,10 @@ public class InterfacciaRubrica extends VBox {
         
         this.listaContatti=new VBox(); ///< Contenitore per la lista dei contatti.
         listaContatti.setAlignment(Pos.CENTER);
-        this.getChildren().add(listaContatti);
+        ScrollPane barra=new ScrollPane();
+        barra.setContent(listaContatti);
+        barra.setFitToWidth(true);
+        this.getChildren().add(barra);
         
         this.upload=new Button("Upload file"); ///< Pulsante per caricare i contatti da file.
         this.download=new Button("Download contatti"); ///< Pulsante per salvare i contatti su file.
