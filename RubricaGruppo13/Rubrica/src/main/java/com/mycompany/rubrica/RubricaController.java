@@ -56,7 +56,7 @@ public class RubricaController {
         HBox contatto=new HBox();
         contatto.setSpacing(15);
         contatto.setAlignment(Pos.CENTER);
-        contatto.setStyle("-fx-border-color: black; -fx-border-width: 1px 2px 1px 2px; -fx-padding: 10px;");
+        contatto.setStyle("-fx-border-color: black; -fx-border-width: 1px 2px 1px 2px; -fx-padding: 10px; -fx-background-color: white;");
         contatto.setMaxWidth(1650.0);
         
         
